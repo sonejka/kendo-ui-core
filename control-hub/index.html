@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="styles/kendo.common.min.css" />
+    <link rel="stylesheet" href="../dist/styles/web/kendo.material.css" />
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+</head>
+<body>
+
+<div id="example" class="k-content" style="opacity: 1; visibility: visible;">
+    <div class="column">
+        <h3>Button</h3>
+        <button class="k-button">A button</button>
+        <button class="k-button">Another one</button>
+
+        <h3>Menu</h3>
+        <ul data-role="menu" class="k-widget k-reset k-header k-menu k-menu-horizontal" tabindex="0" role="menubar">
+            <li class="k-item k-state-default k-first" role="menuitem"><span class="k-link">First Item
+                <span class="k-icon k-i-arrow-s"></span></span><ul class="k-group k-menu-group" role="menu" aria-hidden="true">
+                <li class="k-item k-state-default k-first" role="menuitem"><span class="k-link">Sub Item 1</span></li>
+                <li class="k-item k-state-default" role="menuitem"><span class="k-link">Sub Item 2
+                        <span class="k-icon k-i-arrow-e"></span></span><ul class="k-group k-menu-group" role="menu" aria-hidden="true">
+                    <li class="k-item k-state-default k-first" role="menuitem"><span class="k-link">Sub Item 1</span></li>
+                    <li class="k-item k-state-default" role="menuitem"><span class="k-link">Sub Item 2</span></li>
+                    <li class="k-item k-state-default" role="menuitem"><span class="k-link">Sub Item 3</span></li>
+                    <li class="k-item k-state-default k-last" role="menuitem"><span class="k-link">Sub Item 4</span></li>
+                </ul>
+                </li>
+                <li class="k-item k-state-default" role="menuitem"><span class="k-link">Sub Item 3</span></li>
+                <li class="k-item k-state-default k-last" role="menuitem"><span class="k-link">Sub Item 4</span></li>
+            </ul>
+            </li>
+            <li class="k-item k-state-disabled" aria-disabled="true" role="menuitem"><span class="k-link">Disabled</span></li>
+            <li class="k-item k-state-default k-last" role="menuitem" style="z-index: auto;"><span class="k-link">Template
+                <span class="k-icon k-i-arrow-s"></span></span>
+                <div class="k-animation-container" style="width: 163px; height: 106px; margin-left: -2px; padding-left: 2px; padding-right: 2px; padding-bottom: 4px; overflow: hidden; display: none; position: absolute; z-index: 10002; top: 48px; left: 0px;"><ul class="k-group k-menu-group k-popup k-reset" role="menu" data-role="popup" style="display: none; font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-stretch: normal; font-style: normal; font-weight: 500; line-height: normal; position: absolute; -webkit-transform: translateY(-138px);" aria-hidden="true">
+                    <li class="k-item k-state-default k-first k-last" role="menuitem">
+                        <div class="k-content" style="padding: 10px;" tabindex="-1">
+                            This is a <br>simple template item.<br><br>
+                            <button class="k-button">With a button</button>
+                        </div>
+                    </li>
+                </ul></div></li>
+        </ul>
+
+        <h3>Grid</h3>
+        <div data-role="grid" data-bind="source: sharedDataSource" data-scrollable="false" data-selectable="true" data-filterable="true" data-sortable="{ allowUnsort: false }" data-columns="[
+                {field:'year',title:'Year',width:100},
+                {field:'value',title:'Estimated Users'}
+            ]" class="k-grid k-widget"><table role="grid" data-role="selectable" class="k-selectable"><colgroup><col style="width:100px"><col></colgroup><thead class="k-grid-header" role="rowgroup"><tr role="row"><th role="columnheader" data-field="year" rowspan="1" data-title="Year" data-index="0" class="k-header k-with-icon k-filterable" data-role="columnsorter" data-dir="asc" aria-sort="ascending"><a class="k-grid-filter k-state-active" href="#" tabindex="-1"><span class="k-icon k-filter"></span></a><a class="k-link" href="#">Year<span class="k-icon k-i-arrow-n"></span></a></th><th role="columnheader" data-field="value" rowspan="1" data-title="Estimated Users" data-index="1" class="k-header k-with-icon k-filterable" data-role="columnsorter"><a class="k-grid-filter" href="#" tabindex="-1"><span class="k-icon k-filter"></span></a><a class="k-link" href="#">Estimated Users</a></th></tr></thead><tbody role="rowgroup"><tr data-uid="b6fc1426-9a65-4f0d-8946-b4b1ae7804b9" role="row"><td role="gridcell">2000</td><td role="gridcell">124000000</td></tr><tr class="k-alt" data-uid="aa8e012b-2b05-431f-8083-15e65d91a3e1" role="row"><td role="gridcell">2001</td><td role="gridcell">143000000</td></tr><tr data-uid="eb9498b1-da62-4438-94f5-60d5a0ac9502" role="row"><td role="gridcell">2002</td><td role="gridcell">173000000</td></tr><tr class="k-alt" data-uid="9ff64fd0-bd10-4f9a-944d-5c73dc2ebfdb" role="row"><td role="gridcell">2003</td><td role="gridcell">183000000</td></tr><tr data-uid="ec4d78bb-d36b-4f27-aeea-12746f4581de" role="row"><td role="gridcell">2004</td><td role="gridcell">194000000</td></tr><tr class="k-alt" data-uid="89dfabb5-0ba8-4856-8517-dfdc5dfd7a36" role="row"><td role="gridcell">2005</td><td role="gridcell">206000000</td></tr><tr data-uid="73b09a57-d206-442b-a774-2824a42011d5" role="row"><td role="gridcell">2006</td><td role="gridcell">211000000</td></tr><tr class="k-alt" data-uid="fd99fd04-8c5d-4d71-bf97-3093055c6ca1" role="row"><td role="gridcell">2007</td><td role="gridcell">232000000</td></tr><tr data-uid="8cbd4464-dd86-40aa-bfc5-b2d5676fe9d0" role="row"><td role="gridcell">2008</td><td role="gridcell">231000000</td></tr><tr class="k-alt" data-uid="2154fc33-c61d-4679-8c28-211cca38ab83" role="row"><td role="gridcell">2009</td><td role="gridcell">245000000</td></tr></tbody></table></div>
+
+        <h3>TabStrip</h3>
+        <div class="k-tabstrip-wrapper"><div data-role="tabstrip" tabindex="0" class="k-widget k-header k-tabstrip" role="tablist">
+            <ul class="k-tabstrip-items k-reset"><li class="k-state-active k-item k-tab-on-top k-state-default k-first" role="tab" aria-selected="true" aria-controls="62a54bd8-d22d-479b-9278-d2f5aeba6162-1"><span class="k-loading k-complete"></span><span class="k-link">First Tab</span></li><li class="k-item k-state-default" role="tab" aria-controls="62a54bd8-d22d-479b-9278-d2f5aeba6162-2"><span class="k-loading k-complete"></span><span class="k-link">Second Tab</span></li><li class="k-item k-state-default k-last" role="tab" aria-controls="62a54bd8-d22d-479b-9278-d2f5aeba6162-3"><span class="k-loading k-complete"></span><span class="k-link">Third Tab</span></li></ul>
+            <div class="k-content k-state-active" id="62a54bd8-d22d-479b-9278-d2f5aeba6162-1" role="tabpanel" aria-expanded="true" style="display: block;"><p>TabStrip sample content, first tab</p></div>
+            <div class="k-content" id="62a54bd8-d22d-479b-9278-d2f5aeba6162-2" role="tabpanel" aria-hidden="true" aria-expanded="false"><p>TabStrip sample content, second tab</p></div>
+            <div class="k-content" id="62a54bd8-d22d-479b-9278-d2f5aeba6162-3" role="tabpanel" aria-hidden="true" aria-expanded="false"><p>TabStrip sample content, third tab</p></div>
+        </div></div>
+
+        <h3>PanelBar</h3>
+        <ul data-role="panelbar" class="k-widget k-reset k-header k-panelbar" tabindex="0" role="menu">
+            <li class="k-state-active k-item k-first" aria-expanded="false" role="menuitem"><span class="k-link k-header">Item 1
+                <span class="k-icon k-i-arrow-n k-panelbar-collapse"></span></span><ul class="k-group k-panel" role="group">
+                <li class="k-item k-state-default k-first" role="menuitem"><span class="k-link">Item 1.1</span></li>
+                <li class="k-item k-state-default" role="menuitem"><span class="k-link">Item 1.2</span></li>
+                <li class="k-item k-state-default k-last" role="menuitem"><span class="k-link">Item 1.3</span></li>
+            </ul>
+            </li>
+            <li aria-expanded="false" class="k-item k-state-default" role="menuitem"><span class="k-link k-header">Item 2
+                <span class="k-icon k-i-arrow-s k-panelbar-expand"></span></span><ul class="k-group k-panel" role="group" aria-hidden="true" style="display: none;">
+                <li class="k-item k-state-default k-first" role="menuitem"><span class="k-link">Item 2.1</span></li>
+                <li class="k-item k-state-default" role="menuitem"><span class="k-link">Item 2.2</span></li>
+                <li class="k-item k-state-default k-last" role="menuitem"><span class="k-link">Item 2.3</span></li>
+            </ul>
+            </li>
+            <li class="k-item k-state-default k-last" role="menuitem"><span class="k-link k-header">Item 3</span></li>
+        </ul>
+    </div>
+
+    <div class="column">
+        <h3>Pickers</h3>
+        <span tabindex="-1" role="presentation" class="k-widget k-autocomplete k-header k-state-default"><input data-role="autocomplete" data-bind="source: countries" type="text" class="k-input" autocomplete="off" role="textbox" aria-haspopup="true" aria-disabled="false" aria-readonly="false" aria-autocomplete="list" aria-owns="" aria-busy="false" style="width: 100%;"><span class="k-icon k-loading" style="display: none;"></span></span>
+        <span class="k-widget k-dropdown k-header" unselectable="on" role="listbox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-owns="" aria-disabled="false" aria-readonly="false" aria-busy="false" style=""><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input">Albania</span><span unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-arrow-s">select</span></span></span><input data-role="dropdownlist" data-bind="source: countries" style="display: none;"></span>
+        <span class="k-widget k-combobox k-header"><span tabindex="-1" unselectable="on" class="k-dropdown-wrap k-state-default"><input class="k-input" type="text" autocomplete="off" maxlength="524288" role="combobox" aria-expanded="false" tabindex="0" aria-disabled="false" aria-readonly="false" aria-autocomplete="list" aria-owns="" aria-busy="false" style="width: 100%;"><span tabindex="-1" unselectable="on" class="k-select"><span unselectable="on" class="k-icon k-i-arrow-s" role="button" tabindex="-1">select</span></span></span><input data-role="combobox" data-bind="source: countries" aria-disabled="false" aria-readonly="false" style="display: none;"></span>
+
+        <span class="k-widget k-datepicker k-header"><span class="k-picker-wrap k-state-default"><input data-role="datepicker" data-bind="value: today" type="text" class="k-input" role="combobox" aria-expanded="false" aria-disabled="false" aria-readonly="false" style="width: 100%;" aria-activedescendant="0ebd320e-ddf8-4efc-ae4e-6bb9848ccb3b_cell_selected"><span unselectable="on" class="k-select" role="button"><span unselectable="on" class="k-icon k-i-calendar">select</span></span></span></span>
+        <span class="k-widget k-timepicker k-header"><span class="k-picker-wrap k-state-default"><input data-role="timepicker" data-bind="value: today" type="text" class="k-input" role="combobox" aria-expanded="false" aria-disabled="false" aria-readonly="false" style="width: 100%;"><span unselectable="on" class="k-select" role="button"><span unselectable="on" class="k-icon k-i-clock">select</span></span></span></span>
+
+        <span class="k-widget k-numerictextbox"><span class="k-numeric-wrap k-state-default"><input type="text" class="k-formatted-value k-input" tabindex="0" aria-disabled="false" aria-readonly="false" style="display: inline-block;"><input data-role="numerictextbox" type="text" min="0" max="10" value="5" role="spinbutton" class="k-input" aria-valuemin="0" aria-valuemax="10" aria-valuenow="5" aria-disabled="false" aria-readonly="false" style="display: none;"><span class="k-select"><span unselectable="on" class="k-link"><span unselectable="on" class="k-icon k-i-arrow-n" title="Increase value">Increase value</span></span><span unselectable="on" class="k-link"><span unselectable="on" class="k-icon k-i-arrow-s" title="Decrease value">Decrease value</span></span></span></span></span>
+
+        <div class="k-widget k-multiselect k-header" unselectable="on" style=""><div class="k-multiselect-wrap k-floatwrap" unselectable="on"><ul role="listbox" unselectable="on" class="k-reset"><li class="k-button" unselectable="on"><span unselectable="on">Finland</span><span unselectable="on" class="k-icon k-delete">delete</span></li><li class="k-button" unselectable="on"><span unselectable="on">Estonia</span><span unselectable="on" class="k-icon k-delete">delete</span></li></ul><input class="k-input" style="width: 25px;" accesskey="" autocomplete="off" role="listbox" aria-expanded="false" tabindex="0" aria-owns="" aria-disabled="false" aria-readonly="false" aria-busy="false"><span class="k-icon k-loading k-loading-hidden"></span></div><select data-role="multiselect" data-bind="source: countries, value: multiSelectValue" multiple="multiple" aria-disabled="false" aria-readonly="false" style="display: none;"><option value="Albania">Albania</option><option value="Andorra">Andorra</option><option value="Armenia">Armenia</option><option value="Austria">Austria</option><option value="Azerbaijan">Azerbaijan</option><option value="Belarus">Belarus</option><option value="Belgium">Belgium</option><option value="Bosnia &amp; Herzegovina">Bosnia &amp; Herzegovina</option><option value="Bulgaria">Bulgaria</option><option value="Croatia">Croatia</option><option value="Cyprus">Cyprus</option><option value="Czech Republic">Czech Republic</option><option value="Denmark">Denmark</option><option value="Estonia">Estonia</option><option value="Finland">Finland</option><option value="France">France</option><option value="Georgia">Georgia</option><option value="Germany">Germany</option><option value="Greece">Greece</option><option value="Hungary">Hungary</option><option value="Iceland">Iceland</option><option value="Ireland">Ireland</option><option value="Italy">Italy</option><option value="Kosovo">Kosovo</option><option value="Latvia">Latvia</option><option value="Liechtenstein">Liechtenstein</option><option value="Lithuania">Lithuania</option><option value="Luxembourg">Luxembourg</option><option value="Macedonia">Macedonia</option><option value="Malta">Malta</option><option value="Moldova">Moldova</option><option value="Monaco">Monaco</option><option value="Montenegro">Montenegro</option><option value="Netherlands">Netherlands</option><option value="Norway">Norway</option><option value="Poland">Poland</option><option value="Portugal">Portugal</option><option value="Romania">Romania</option><option value="Russia">Russia</option><option value="San Marino">San Marino</option><option value="Serbia">Serbia</option><option value="Slovakia">Slovakia</option><option value="Slovenia">Slovenia</option><option value="Spain">Spain</option><option value="Sweden">Sweden</option><option value="Switzerland">Switzerland</option><option value="Turkey">Turkey</option><option value="Ukraine">Ukraine</option><option value="United Kingdom">United Kingdom</option><option value="United States">United States</option><option value="Vatican City">Vatican City</option></select><span style="font-family: Arial; font-size: 13.3333330154419px; font-stretch: normal; font-style: normal; font-weight: normal; letter-spacing: normal; text-transform: none; line-height: 17.466667175293px; position: absolute; visibility: hidden; top: -3333px; left: -3333px;"></span></div>
+
+        <span role="textbox" aria-haspopup="true" class="k-widget k-colorpicker k-header" aria-disabled="false" tabindex="0" aria-label="Current selected color is "><span class="k-picker-wrap k-state-default"><span class="k-selected-color" style="background-color: transparent;"></span><span class="k-select" unselectable="on"><span class="k-icon k-i-arrow-s" unselectable="on"></span></span></span><input data-role="colorpicker" style="display: none;"></span>
+
+        <h3>Slider</h3>
+        <div class="k-widget k-slider k-slider-horizontal k-state-default"><div class="k-slider-wrap k-slider-buttons"><a class="k-button k-button-increase"><span class="k-icon k-i-arrow-e" title="Increase">Increase</span></a><a class="k-button k-button-decrease"><span class="k-icon k-i-arrow-w" title="Decrease">Decrease</span></a><ul class="k-reset k-slider-items"><li class="k-tick k-first k-tick-large" role="presentation" title="0" style="width: 6px;"><span class="k-label">0</span></li><li class="k-tick" role="presentation" title="1" style="width: 14px;">&nbsp;</li><li class="k-tick" role="presentation" title="2" style="width: 13px;">&nbsp;</li><li class="k-tick" role="presentation" title="3" style="width: 13px;">&nbsp;</li><li class="k-tick" role="presentation" title="4" style="width: 13px;">&nbsp;</li><li class="k-tick k-tick-large" role="presentation" title="5" style="width: 13px; line-height: 13px;"><span class="k-label">5</span></li><li class="k-tick" role="presentation" title="6" style="width: 13px;">&nbsp;</li><li class="k-tick" role="presentation" title="7" style="width: 13px;">&nbsp;</li><li class="k-tick" role="presentation" title="8" style="width: 13px;">&nbsp;</li><li class="k-tick" role="presentation" title="9" style="width: 13px;">&nbsp;</li><li class="k-tick k-last k-tick-large" role="presentation" title="10" style="width: 7px;"><span class="k-label">10</span></li></ul><div class="k-slider-track" style="width: 130px;"><div class="k-slider-selection" style="width: 65px;"><!-- --></div><a href="#" class="k-draghandle" title="drag" role="slider" aria-valuemin="0" aria-valuemax="10" aria-valuenow="5" tabindex="0" data-role="draggable" style="left: 60px;">Drag</a></div><input data-role="slider" type="text" min="0" max="10" value="5" style="display: none;"></div></div>
+
+        <h3>TreeView</h3>
+        <div class="k-widget k-treeview" tabindex="0"><ul data-role="treeview" style="height: 140px" class="k-group k-treeview-lines" role="tree">
+            <li data-expanded="true" class="k-item k-first" role="treeitem" data-uid="d43000ad-5f71-441e-8d65-66bf8af2cc05"><div class="k-top"><span class="k-icon k-minus"></span><span class="k-in">Item 1</span></div><ul class="k-group">
+                <li class="k-item" role="treeitem" data-uid="00e0a024-3007-49de-b0e8-1577efaad1d7"><div class="k-top"><span class="k-in">Item 1.1</span></div></li>
+                <li class="k-item" role="treeitem" data-uid="58542d74-a08a-4ef4-ab42-87b1e7697e4e"><div class="k-mid"><span class="k-in">Item 1.2</span></div></li>
+                <li class="k-item k-last" role="treeitem" data-uid="779ae6ce-5ac2-4679-9844-5f3b7d0fa858"><div class="k-bot"><span class="k-in">Item 1.3</span></div></li>
+            </ul>
+            </li>
+            <li class="k-item" role="treeitem" data-uid="c452d12e-834d-4fbf-be45-2a14332002d5"><div class="k-mid"><span class="k-icon k-plus"></span><span class="k-in">Item 2</span></div><ul class="k-group" style="display: none;">
+                <li class="k-item" role="treeitem" data-uid="742c087b-1199-4d6c-aba1-86aa516367f6"><div class="k-top"><span class="k-in">Item 2.1</span></div></li>
+                <li class="k-item" role="treeitem" data-uid="6e85990e-2135-4873-852a-64778dbe41d5"><div class="k-mid"><span class="k-in">Item 2.2</span></div></li>
+                <li class="k-item k-last" role="treeitem" data-uid="b211acbc-2bb3-4680-b870-91fbef293124"><div class="k-bot"><span class="k-in">Item 2.3</span></div></li>
+            </ul>
+            </li>
+            <li class="k-item k-last" role="treeitem" data-uid="4f6dbedc-a5bb-4ce3-8ca6-aa323a614c42"><div class="k-bot"><span class="k-in">Item 3</span></div></li>
+        </ul></div>
+
+        <h3>Window</h3>
+
+    </div>
+
+    <div class="column">
+        <h3 title="Kendo UI Tooltip" id="tooltip" style="width:10em" data-role="tooltip" class="">Tooltip</h3>
+
+        <h3>Upload</h3>
+        <div class="k-widget k-upload k-header k-upload-sync k-upload-empty"><div class="k-button k-upload-button"><input data-role="upload" type="file" multiple="multiple" autocomplete="off"><span>Select files...</span></div></div>
+
+        <h3>Calendar</h3>
+        <div data-role="calendar" class="k-widget k-calendar"><div class="k-header"><a href="#" role="button" class="k-link k-nav-prev" aria-disabled="false"><span class="k-icon k-i-arrow-w"></span></a><a href="#" role="button" aria-live="assertive" aria-atomic="true" class="k-link k-nav-fast" aria-disabled="false">March 2015</a><a href="#" role="button" class="k-link k-nav-next" aria-disabled="false"><span class="k-icon k-i-arrow-e"></span></a></div><table tabindex="0" role="grid" class="k-content" cellspacing="0"><thead><tr role="row"><th scope="col" title="Sunday">Su</th><th scope="col" title="Monday">Mo</th><th scope="col" title="Tuesday">Tu</th><th scope="col" title="Wednesday">We</th><th scope="col" title="Thursday">Th</th><th scope="col" title="Friday">Fr</th><th scope="col" title="Saturday">Sa</th></tr></thead><tbody><tr role="row"><td class="k-other-month k-weekend" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/1/22" title="Sunday, February 22, 2015">22</a></td><td class="k-other-month" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/1/23" title="Monday, February 23, 2015">23</a></td><td class="k-other-month" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/1/24" title="Tuesday, February 24, 2015">24</a></td><td class="k-other-month" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/1/25" title="Wednesday, February 25, 2015">25</a></td><td class="k-other-month" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/1/26" title="Thursday, February 26, 2015">26</a></td><td class="k-other-month" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/1/27" title="Friday, February 27, 2015">27</a></td><td class="k-other-month k-weekend" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/1/28" title="Saturday, February 28, 2015">28</a></td></tr><tr role="row"><td class="k-weekend" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/1" title="Sunday, March 01, 2015">1</a></td><td role="gridcell" class=""><a tabindex="-1" class="k-link" href="#" data-value="2015/2/2" title="Monday, March 02, 2015">2</a></td><td role="gridcell" class=""><a tabindex="-1" class="k-link" href="#" data-value="2015/2/3" title="Tuesday, March 03, 2015">3</a></td><td role="gridcell" class=""><a tabindex="-1" class="k-link" href="#" data-value="2015/2/4" title="Wednesday, March 04, 2015">4</a></td><td role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/5" title="Thursday, March 05, 2015">5</a></td><td role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/6" title="Friday, March 06, 2015">6</a></td><td class="k-weekend" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/7" title="Saturday, March 07, 2015">7</a></td></tr><tr role="row"><td class="k-weekend" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/8" title="Sunday, March 08, 2015">8</a></td><td role="gridcell" class=""><a tabindex="-1" class="k-link" href="#" data-value="2015/2/9" title="Monday, March 09, 2015">9</a></td><td role="gridcell" class=""><a tabindex="-1" class="k-link" href="#" data-value="2015/2/10" title="Tuesday, March 10, 2015">10</a></td><td role="gridcell" class=""><a tabindex="-1" class="k-link" href="#" data-value="2015/2/11" title="Wednesday, March 11, 2015">11</a></td><td role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/12" title="Thursday, March 12, 2015">12</a></td><td class="k-today" role="gridcell" aria-selected="true"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/13" title="Friday, March 13, 2015">13</a></td><td class="k-weekend" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/14" title="Saturday, March 14, 2015">14</a></td></tr><tr role="row"><td class="k-weekend" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/15" title="Sunday, March 15, 2015">15</a></td><td role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/16" title="Monday, March 16, 2015">16</a></td><td role="gridcell" class=""><a tabindex="-1" class="k-link" href="#" data-value="2015/2/17" title="Tuesday, March 17, 2015">17</a></td><td role="gridcell" class=""><a tabindex="-1" class="k-link" href="#" data-value="2015/2/18" title="Wednesday, March 18, 2015">18</a></td><td role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/19" title="Thursday, March 19, 2015">19</a></td><td role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/20" title="Friday, March 20, 2015">20</a></td><td class="k-weekend" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/21" title="Saturday, March 21, 2015">21</a></td></tr><tr role="row"><td class="k-weekend" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/22" title="Sunday, March 22, 2015">22</a></td><td role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/23" title="Monday, March 23, 2015">23</a></td><td role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/24" title="Tuesday, March 24, 2015">24</a></td><td role="gridcell" class=""><a tabindex="-1" class="k-link" href="#" data-value="2015/2/25" title="Wednesday, March 25, 2015">25</a></td><td role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/26" title="Thursday, March 26, 2015">26</a></td><td role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/27" title="Friday, March 27, 2015">27</a></td><td class="k-weekend" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/28" title="Saturday, March 28, 2015">28</a></td></tr><tr role="row"><td class="k-weekend" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/29" title="Sunday, March 29, 2015">29</a></td><td role="gridcell" class=""><a tabindex="-1" class="k-link" href="#" data-value="2015/2/30" title="Monday, March 30, 2015">30</a></td><td role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/2/31" title="Tuesday, March 31, 2015">31</a></td><td class="k-other-month" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/3/1" title="Wednesday, April 01, 2015">1</a></td><td class="k-other-month" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/3/2" title="Thursday, April 02, 2015">2</a></td><td class="k-other-month" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/3/3" title="Friday, April 03, 2015">3</a></td><td class="k-other-month k-weekend" role="gridcell"><a tabindex="-1" class="k-link" href="#" data-value="2015/3/4" title="Saturday, April 04, 2015">4</a></td></tr></tbody></table><div class="k-footer"><a href="#" class="k-link k-nav-today" title="Friday, March 13, 2015">Friday, March 13, 2015</a></div></div>
+
+        <h3>Splitter</h3>
+        <div data-role="splitter" style="height: 120px;" class="k-widget k-splitter">
+            <div role="group" class="k-pane k-scrollable" style="position: absolute; top: 0px; width: 169px; height: 120px; left: 0px;">Left pane</div><div tabindex="0" class="k-splitbar k-state-default k-splitbar-horizontal k-splitbar-draggable-horizontal" data-marker="3c5ce051" role="separator" aria-expanded="true" style="height: 120px; left: 169px;"><div class="k-icon k-resize-handle"></div></div>
+            <div role="group" class="k-pane k-scrollable" style="position: absolute; top: 0px; width: 170px; height: 120px; left: 176px;">Right pane</div>
+        </div>
+
+        <h3>Progress bar</h3>
+        <div data-role="progressbar" data-value="40" style="width: auto" class="k-widget k-progressbar k-progressbar-horizontal"><span class="k-progress-status-wrap"><span class="k-progress-status">40</span></span><div class="k-state-selected" style="width: 40%;"><span class="k-progress-status-wrap" style="width: 250%;"><span class="k-progress-status">40</span></span></div></div>
+
+        <h3>Notifications</h3>
+        <div id="notification" data-role="notification"><div class="k-widget k-notification k-notification-info _35ac7325-db61-4240-9285-4afbe6e380f2" data-role="alert" style="display: block; opacity: 1;"><div class="k-notification-wrap"><span class="k-icon k-i-note">info</span>information<span class="k-icon k-i-close">Hide</span></div></div><div class="k-widget k-notification k-notification-success _35ac7325-db61-4240-9285-4afbe6e380f2" data-role="alert" style="display: block; opacity: 1;"><div class="k-notification-wrap"><span class="k-icon k-i-note">success</span>success<span class="k-icon k-i-close">Hide</span></div></div><div class="k-widget k-notification k-notification-warning _35ac7325-db61-4240-9285-4afbe6e380f2" data-role="alert" style="display: block; opacity: 1;"><div class="k-notification-wrap"><span class="k-icon k-i-note">warning</span>warning<span class="k-icon k-i-close">Hide</span></div></div><div class="k-widget k-notification k-notification-error _35ac7325-db61-4240-9285-4afbe6e380f2" data-role="alert" style="display: block; opacity: 1;"><div class="k-notification-wrap"><span class="k-icon k-i-note">error</span>error<span class="k-icon k-i-close">Hide</span></div></div></div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function() {
+    kendo.bind($("#example"), {
+        countries: [
+            "Albania", "Andorra", "Armenia", "Austria", "Azerbaijan", "Belarus", "Belgium", "Bosnia & Herzegovina", "Bulgaria",
+            "Croatia", "Cyprus", "Czech Republic", "Denmark", "Estonia", "Finland", "France", "Georgia", "Germany", "Greece",
+            "Hungary", "Iceland", "Ireland", "Italy", "Kosovo", "Latvia", "Liechtenstein", "Lithuania", "Luxembourg", "Macedonia",
+            "Malta", "Moldova", "Monaco", "Montenegro", "Netherlands", "Norway", "Poland", "Portugal", "Romania", "Russia", "San Marino",
+            "Serbia", "Slovakia", "Slovenia", "Spain", "Sweden", "Switzerland", "Turkey", "Ukraine", "United Kingdom", "United States",
+            "Vatican City"
+        ],
+        multiSelectValue: [ "Finland", "Estonia" ],
+        today: kendo.toString(new Date()),
+        sharedDataSource: new kendo.data.DataSource({
+            transport: {
+                read: {
+                    url: '/kendo-ui/content/web/datasource/internet-users.json',
+                    dataType: "json"
+                }
+            },
+            sort: {
+                field: "year",
+                dir: "asc"
+            },
+            filter: [
+                { field: "country", operator: "equals", value: "United States" },
+                { field: "year", operator: "greaterThanEqual", value: 2000 }
+            ],
+            schema: {
+                model: {
+                    fields: {
+                        year: {
+                            type: "number"
+                        },
+                        value: {
+                            type: "string"
+                        }
+                    }
+                }
+            }
+        })
+    });
+
+    $("#tooltip").kendoTooltip({
+        position: "top"
+    }).data("kendoTooltip").show();
+
+    var serviceBaseUrl = "http://demos.telerik.com/kendo-ui/service";
+
+    var notification = $("#notification").kendoNotification({
+        autoHideAfter: 0,
+        hideOnClick: false,
+        appendTo: "#notification"
+    }).data("kendoNotification");
+
+    notification.info("information");
+    notification.success("success");
+    notification.warning("warning");
+    notification.error("error");
+});
+
+$(document).ready(initialize);
+</script>
+
+</body>
+</html>
