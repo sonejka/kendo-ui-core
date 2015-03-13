@@ -6,6 +6,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-debug-task');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadTasks('build/grunt/tasks');
 
     // support different test sets for public|private repo
@@ -143,6 +144,27 @@ module.exports = function(grunt) {
                     )
                 }
             }
+        },
+
+        watch: {
+            less: {
+                files: ["styles/**/kendo*.less"],
+                tasks: ['less']
+            }
+//            styles: {
+//                files: ['<%= config.app %>/styles/{,*/}*.css'],
+//                tasks: ['newer:copy:styles', 'autoprefixer']
+//            },
+//            livereload: {
+//                options: {
+//                    livereload: '<%= connect.options.livereload %>'
+//                },
+//                files: [
+//                    '<%= config.app %>/{,*/}*.html',
+//                    '.tmp/styles/{,*/}*.css',
+//                    '<%= config.app %>/images/{,*/}*'
+//                ]
+//            }
         },
 
         copy: {

@@ -1,10 +1,22 @@
+@alt-primary-red: #ff503f;
+@alt-primary-gray: #404a58;
+@alt-primary-silver: #e1e3e6;
+
+@alt-minor-red: #cc4033;
+@alt-minor-gray: #5b6a7f;
+@alt-minor-silver: #c8cacc;
+
+@alt-text-color: #454545;
+
+
+
 @image-folder: "Material";
 @texture: none;
 @tooltip-texture: none;
 @fallback-texture: none;
 
 /* Widget Base Styles */
-@widget-text-color: #444444;
+@widget-text-color: @alt-text-color;
 @inverse-text-color: #fff;
 @widget-gradient: none;
 @widget-background-color: #fff;
@@ -16,15 +28,15 @@
 @input-text-color: @widget-text-color;
 
 /* Links */
-@link-text-color: #428bca;
+@link-text-color: @alt-primary-red;
 
 /* Headers */
 @header-text-color: #fff;
-@header-background-color: #3f51b5;
+@header-background-color: @alt-primary-gray;
 
 /* Buttons */
 @button-text-color: @widget-text-color;
-@button-background-color: #f9f9f9;
+@button-background-color: @alt-primary-silver;
 
 /* Group Base Styles */
 @group-background-color: #3f51b5;
@@ -39,8 +51,8 @@
 /* Hover State */
 @hover-text-color: @widget-text-color;
 @hover-gradient: none;
-@hover-background-color: #ebebeb;
-@hover-border-color: #ebebeb;
+@hover-background-color: @alt-primary-silver;
+@hover-border-color: @alt-primary-silver;
 @hover-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
 
 /* Selects, Dropdowns */
@@ -58,8 +70,8 @@
 
 /*Focused State*/
 @focused-border-color: #67afe9;
-@focused-shadow: 0 2px 6px rgba(0,0,0,.2), 0 2px 3px rgba(0,0,0,.05);
-@focused-item-shadow: 0 6px 17px 0 rgba(0, 0, 0, 0.3);
+@focused-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
+@focused-item-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
 @focused-active-item-shadow: none;
 
 /* Active State */
@@ -150,9 +162,9 @@
 @shadow-inset-color: #ccc;
 
 /* Border Radii */
-@main-border-radius: 2px;
-@list-border-radius: @main-border-radius - 1;
-@inner-border-radius: @main-border-radius - 1;
+@main-border-radius: 1px;
+@list-border-radius: @main-border-radius;
+@inner-border-radius: @main-border-radius;
 @slider-border-radius: 13px;
 
 /* Icons */
@@ -168,7 +180,7 @@
 @calendar-header-hover-background: @hover-background-color;
 @calendar-footer-active-background: @widget-background-color;
 @calendar-group-background-color: @group-background-color;
-@button-border-color: #f9f9f9;
+@button-border-color: @alt-primary-silver;
 @menu-border-color: @widget-border-color;
 @tabstrip-items-border: transparent;
 @tabstrip-active-background: @widget-background-color;
@@ -177,7 +189,7 @@
 @drop-down-border-color: #efefef;
 @drop-down-hover-border-color: #f4f4f4;
 @drop-down-focused-border-color: #f4f4f4;
-@drop-down-background: #f9f9f9;
+@drop-down-background: #fff;
 @drop-down-text-color: @widget-text-color;
 @secondary-border-color: #cccccc;
 @secondary-text-color: #fff;
@@ -212,13 +224,13 @@
 @concave-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
 
 @primary-button-text-color: #fff;
-@primary-button-background-color: #3f51b5;
-@primary-button-border-color: #3f51b5;
+@primary-button-background-color: @alt-primary-gray;
+@primary-button-border-color: @alt-primary-gray;
 @primary-gradient: none;
 @primary-shadow:none;
 
 @primary-hover-text-color: @primary-button-text-color;
-@primary-hover-background-color: #5c6bc0;
+@primary-hover-background-color: @alt-minor-gray;
 @primary-hover-border-color: #5c6bc0;
 @primary-hover-gradient: none;
 @primary-hover-shadow: none;
@@ -232,7 +244,7 @@
 @primary-active-background-color: #283593;
 @primary-active-gradient: none;
 @primary-active-border-color: #283593;
-@primary-active-shadow: 0 6px 17px 0 rgba(0, 0, 0, 0.3);
+@primary-active-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.3);
 
 @primary-disabled-text-color: #a8a8a8;
 @primary-disabled-background-color: #eaeaea;
@@ -246,8 +258,8 @@
 @button-active-background: #dbdbdb;
 @button-active-border-color: #dbdbdb;
 @button-focused-border-color: #dbdbdb;
-@button-focused-shadow: 0 6px 17px 0 #c4c4c4;
-@button-focused-active-shadow: 0 6px 17px 0 rgba(0, 0, 0, .3);
+@button-focused-shadow: 0 0px 6px 0 #c4c4c4;
+@button-focused-active-shadow: 0 0px 6px 0 rgba(0, 0, 0, 0.3);
 
 
 //new var-s
@@ -354,7 +366,11 @@ div.k-splitbar.k-state-focused .k-icon,
     opacity: 0.25;
 }
 
-.k-button,
+
+.k-button {
+  border: 0 !important;
+}
+
 .k-button:hover,
 .k-button.k-state-hover,
 .k-button.k-state-focused,
@@ -479,12 +495,12 @@ background-color: @button-active-background;
     border-color: @button-border-color;
     .composite-background(@widget-gradient);
     background-position: 50% 50%;
-    background-color: @button-background-color;
+    background-color: #fff;
 }
 
 .k-dropdown,
 span.k-colorpicker {
-	background-color: @button-background-color;
+	background-color: #fff;
 }
 
 .k-textbox {
@@ -592,7 +608,9 @@ border-color: @widget-background-color;
 .k-list > .k-state-selected.k-state-focused {
 background-color: @selected-background-color;
 border-color: @selected-background-color;
+  color: @alt-primary-red;
 .box-shadow(none);
+
 }
 
 .k-list > .k-state-focused {
@@ -678,10 +696,14 @@ border-radius: 0;
 }
 
 .k-tabstrip-items .k-state-active {
-background-color: @header-background-color;
+background-color: #363f4b;
 .composite-background(@active-gradient);
 border-color: @header-background-color;
-border-bottom-color: @accent-color;
+border-bottom-color: @alt-primary-red;
+}
+
+.k-tabstrip-items .k-state-active .k-link {
+  color: @alt-primary-red;
 }
 
 .k-tabstrip .k-content.k-state-active {
@@ -690,8 +712,8 @@ border-bottom-color: @accent-color;
 
 .k-tabstrip-items .k-item.k-state-hover
 {
-background: @secondary-hover-background-color;
-border-color: @secondary-hover-background-color;
+background: #363f4b;
+border-color: #363f4b;
 }
 
 .k-tabstrip-items .k-state-hover .k-link {

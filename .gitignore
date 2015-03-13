@@ -30,3 +30,6 @@ build/timezone-js
 ci
 docs
 playground
+telerik-kendoui-professional
+.idea
+styles_old
