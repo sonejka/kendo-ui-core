@@ -35,6 +35,45 @@
         <button class="k-button">A button</button>
         <button class="k-button k-state-disabled">Disabled button</button>
 
+        <h3>Radio buttons</h3>
+        <ul>
+            <li>
+                <input type="radio" name="engine" id="engine1" class="k-radio" checked="checked">
+                <label class="k-radio-label" for="engine1">1.4 Petrol, 92kW</label>
+            </li>
+            <li>
+                <input type="radio" name="engine" id="engine2" class="k-radio">
+                <label class="k-radio-label" for="engine2">1.8 Petrol, 118kW</label>
+            </li>
+            <li>
+                <input type="radio" name="engine" id="engine3" class="k-radio">
+                <label class="k-radio-label" for="engine3">2.0 Petrol, 147kW</label>
+            </li>
+            <li>
+                <input type="radio" name="engine" id="engine4" class="k-radio" disabled="disabled">
+                <label class="k-radio-label" for="engine4">3.6 Petrol, 191kW</label>
+            </li>
+        </ul>
+
+        <h3>Checkboxes</h3>
+        <ul>
+            <li>
+                <input type="checkbox" id="eq1" class="k-checkbox" checked="checked">
+                <label class="k-checkbox-label" for="eq1">Rear side airbags</label>
+            </li>
+            <li>
+                <input type="checkbox" id="eq2" class="k-checkbox" checked="checked" disabled="disabled">
+                <label class="k-checkbox-label" for="eq2">Leather trim</label>
+            </li>
+            <li>
+                <input type="checkbox" id="eq3" class="k-checkbox">
+                <label class="k-checkbox-label" for="eq3">Luggage compartment cover</label>
+            </li>
+            <li>
+                <input type="checkbox" id="eq2" class="k-checkbox" disabled="disabled">
+                <label class="k-checkbox-label" for="eq2">Leather weels</label>
+            </li>
+        </ul>
 
         <h3>Menu</h3>
         <ul data-role="menu">
@@ -170,6 +209,274 @@
         <h3>Notifications</h3>
         <div id="notification"></div>
     </div>
+</div>
+
+    <div>
+        <h3>Pivotal grid</h3>
+        <div id="configurator"></div>
+        <div id="pivotgrid"></div>
+
+        <script>
+            $(document).ready(function () {
+                var pivotgrid = $("#pivotgrid").kendoPivotGrid({
+                    filterable: true,
+                    sortable: true,
+                    columnWidth: 200,
+                    height: 580,
+                    dataSource: {
+                        type: "xmla",
+                        columns: [{ name: "[Date].[Calendar]", expand: true }, { name: "[Product].[Category]" } ],
+                        rows: [{ name: "[Geography].[City]" }],
+                        measures: ["[Measures].[Reseller Freight Cost]"],
+                        transport: {
+                            connection: {
+                                catalog: "Adventure Works DW 2008R2",
+                                cube: "Adventure Works"
+                            },
+                            read: "http://demos.telerik.com/olap/msmdpump.dll"
+                        },
+                        schema: {
+                            type: "xmla"
+                        },
+                        error: function (e) {
+                            alert("error: " + kendo.stringify(e.errors[0]));
+                        }
+                    }
+                }).data("kendoPivotGrid");
+
+                $("#configurator").kendoPivotConfigurator({
+                    dataSource: pivotgrid.dataSource,
+                    filterable: true,
+                    sortable: true,
+                    height: 580
+                });
+            });
+        </script>
+        <style>
+            #pivotgrid
+            {
+                display: inline-block;
+                vertical-align: top;
+                width: 70%;
+            }
+
+            #configurator
+            {
+                display: inline-block;
+                vertical-align: top;
+            }
+        </style>
+
+
+    </div>
+
+<div>
+    <h3>Detail template</h3>
+    <div>
+        <div id="grid"></div>
+
+        <script type="text/x-kendo-template" id="template">
+            <div class="tabstrip">
+                <ul>
+                    <li class="k-state-active">
+                        Orders
+                    </li>
+                    <li>
+                        Contact Information
+                    </li>
+                </ul>
+                <div>
+                    <div class="orders"></div>
+                </div>
+                <div>
+                    <div class='employee-details'>
+                        <ul>
+                            <li><label>Country:</label>#= Country #</li>
+                            <li><label>City:</label>#= City #</li>
+                            <li><label>Address:</label>#= Address #</li>
+                            <li><label>Home Phone:</label>#= HomePhone #</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </script>
+
+        <script>
+            $(document).ready(function() {
+                var element = $("#grid").kendoGrid({
+                    dataSource: {
+                        type: "odata",
+                        transport: {
+                            read: "http://demos.telerik.com/kendo-ui/service/Northwind.svc/Employees"
+                        },
+                        pageSize: 20,
+                        serverPaging: true,
+                        serverSorting: true
+                    },
+                    height: 550,
+                    sortable: true,
+                    pageable: false,
+                    detailTemplate: kendo.template($("#template").html()),
+                    detailInit: detailInit,
+                    dataBound: function() {
+                        this.expandRow(this.tbody.find("tr.k-master-row").first());
+                    },
+                    columns: [
+                        {
+                            field: "FirstName",
+                            title: "First Name",
+                            width: "120px"
+                        },
+                        {
+                            field: "LastName",
+                            title: "Last Name",
+                            width: "120px"
+                        },
+                        {
+                            field: "Country",
+                            width: "120px"
+                        },
+                        {
+                            field: "City",
+                            width: "120px"
+                        },
+                        {
+                            field: "Title"
+                        }
+                    ]
+                });
+            });
+
+            function detailInit(e) {
+                var detailRow = e.detailRow;
+
+                detailRow.find(".tabstrip").kendoTabStrip({
+                    animation: {
+                        open: { effects: "fadeIn" }
+                    }
+                });
+
+                detailRow.find(".orders").kendoGrid({
+                    dataSource: {
+                        type: "odata",
+                        transport: {
+                            read: "http://demos.telerik.com/kendo-ui/service/Northwind.svc/Orders"
+                        },
+                        serverPaging: true,
+                        serverSorting: true,
+                        serverFiltering: true,
+                        pageSize: 7,
+                        filter: { field: "EmployeeID", operator: "eq", value: e.data.EmployeeID }
+                    },
+                    scrollable: false,
+                    sortable: true,
+                    pageable: true,
+                    columns: [
+                        { field: "OrderID", title:"ID", width: "70px" },
+                        { field: "ShipCountry", title:"Ship Country", width: "110px" },
+                        { field: "ShipAddress", title:"Ship Address" },
+                        { field: "ShipName", title: "Ship Name", width: "300px" }
+                    ]
+                });
+            }
+        </script>
+        <style scoped>
+            .k-detail-cell .k-tabstrip .k-content {
+                padding: 0.2em;
+            }
+            .employee-details ul
+            {
+                list-style:none;
+                font-style:italic;
+                margin: 15px;
+                padding: 0;
+            }
+            .employee-details ul li
+            {
+                margin: 0;
+                line-height: 1.7em;
+            }
+
+            .employee-details label
+            {
+                display:inline-block;
+                width:90px;
+                padding-right: 10px;
+                text-align: right;
+                font-style:normal;
+                font-weight:bold;
+            }
+        </style>
+    </div>
+
+</div>
+
+<div>
+    <h3>Inline editing grid</h3>
+    <div id="inlinegrid"></div>
+
+    <script>
+        $(document).ready(function () {
+            var crudServiceBaseUrl = "http://demos.telerik.com/kendo-ui/service",
+                    dataSource = new kendo.data.DataSource({
+                        transport: {
+                            read:  {
+                                url: crudServiceBaseUrl + "/Products",
+                                dataType: "jsonp"
+                            },
+                            update: {
+                                url: crudServiceBaseUrl + "/Products/Update",
+                                dataType: "jsonp"
+                            },
+                            destroy: {
+                                url: crudServiceBaseUrl + "/Products/Destroy",
+                                dataType: "jsonp"
+                            },
+                            create: {
+                                url: crudServiceBaseUrl + "/Products/Create",
+                                dataType: "jsonp"
+                            },
+                            parameterMap: function(options, operation) {
+                                if (operation !== "read" && options.models) {
+                                    return {models: kendo.stringify(options.models)};
+                                }
+                            }
+                        },
+                        batch: true,
+                        pageSize: 20,
+                        schema: {
+                            model: {
+                                id: "ProductID",
+                                fields: {
+                                    ProductID: { editable: false, nullable: true },
+                                    ProductName: { validation: { required: true } },
+                                    UnitPrice: { type: "number", validation: { required: true, min: 1} },
+                                    Discontinued: { type: "boolean" },
+                                    UnitsInStock: { type: "number", validation: { min: 0, required: true } }
+                                }
+                            }
+                        }
+                    });
+
+            $("#inlinegrid").kendoGrid({
+                dataSource: dataSource,
+                navigatable: true,
+                pageable: true,
+                height: 550,
+                toolbar: ["create", "save", "cancel"],
+                columns: [
+                    "ProductName",
+                    { field: "UnitPrice", title: "Unit Price", format: "{0:c}", width: 120 },
+                    { field: "UnitsInStock", title: "Units In Stock", width: 120 },
+                    { field: "Discontinued", width: 120 },
+                    { command: "destroy", title: "&nbsp;", width: 150 }],
+                editable: true
+            });
+        });
+    </script>
+</div>
+
 </div>
 
 
