@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Kendo UI Controls</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
     <!--<link rel="stylesheet" href="styles/kendo.common.min.css" />-->
 
@@ -36,8 +37,12 @@
         <button class="k-button">A button</button>
         <button class="k-button k-state-disabled">Disabled button</button>
 
+        <h3>Button</h3>
+        <button class="k-accent k-button">Accent button</button>
+        <button class="k-accent k-button k-state-disabled">Accent disabled button</button>
+
         <h3>Radio buttons</h3>
-        <ul>
+        <ul class="radio-list">
             <li>
                 <input type="radio" name="engine" id="engine1" class="k-radio" checked="checked">
                 <label class="k-radio-label" for="engine1">1.4 Petrol, 92kW</label>
@@ -57,7 +62,7 @@
         </ul>
 
         <h3>Checkboxes</h3>
-        <ul>
+        <ul class="checkbox-list">
             <li>
                 <input type="checkbox" id="eq1" class="k-checkbox" checked="checked">
                 <label class="k-checkbox-label" for="eq1">Rear side airbags</label>
@@ -131,7 +136,7 @@
         </div>
 
         <h3>PanelBar</h3>
-        <ul data-role="panelbar">
+        <ul data-role="panelbar" style="width: 200px;">
             <li class="k-state-active">Item 1
                 <ul>
                     <li>Item 1.1</li>
@@ -224,7 +229,7 @@
     <h3>Pivotal grid</h3>
 
     <div id="configurator"></div>
-    <div id="pivotgrid"></div>
+    <div style="display: none" id="pivotgrid"></div>
 
     <script>
         $(document).ready(function () {
@@ -506,11 +511,14 @@
         margin: 0 auto;
         overflow: hidden;
         position: relative;
+        padding-bottom: 200px;
+        font-family: 'Roboto', sans-serif;
     }
 
     h3 {
-        font: normal 16px/1.5 Arial, sans-serif;
+        font: bold 16px/1.5 Arial, sans-serif;
         margin: 20px 0 13px;
+        padding-top: 50px;
     }
 
     #instructions-box {
@@ -566,6 +574,10 @@
 
     .column .k-widget {
         margin-bottom: 14px;
+    }
+
+    ul.radio-list, ul.checkbox-list {
+        line-height: 1.6em;
     }
 </style>
 <script>
