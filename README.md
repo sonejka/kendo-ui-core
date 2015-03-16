@@ -1,3 +1,5 @@
+# http://sonejka.github.io/kendo-ui-core/control-hub/
+
 # Kendo UI Core
 
 ## About Kendo UI Core
