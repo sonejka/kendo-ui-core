@@ -14,10 +14,8 @@ dist/
 .livereload
 .dir-locals.el
 !src/jquery.min.js
-styles/web/*.css
 styles/mobile/*.css
 styles/dataviz/*.min.css
-styles/*.css
 !styles/web/kendo.rtl.css
 node_modules
 ./tags
