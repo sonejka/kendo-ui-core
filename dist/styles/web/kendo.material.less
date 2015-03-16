@@ -188,7 +188,7 @@
 @slider-border-radius: 13px;
 
 /* Icons */
-@default-icon-opacity: .5;
+@default-icon-opacity: .7;
 
 @calendar-border-radius: 50%;
 @calendar-content-text-color: @widget-text-color;
@@ -213,7 +213,7 @@
 @drop-down-text-color: @widget-text-color;
 @secondary-border-color: #cccccc;
 @secondary-text-color: #fff;
-@numeric-selected-background: #ebebeb;
+@numeric-selected-background: #fff;
 @panelbar-items-border: @widget-border-color;
 @panelbar-content-background: @content-background-color;
 @panelbar-content-color: @widget-text-color;
@@ -291,20 +291,20 @@
 
 //Checkboxes
 @checkbox-border-color-before: transparent;
-@checkbox-border-color-after: #7f7f7f;
+@checkbox-border-color-after: @alt-primary-red;
 @checkbox-border-radius-before: 1px;
-@checkbox-background-color: @widget-background-color;
+@checkbox-background-color: #fff;
 
-@checkbox-hover-border-color: #7f7f7f;
+@checkbox-hover-border-color: @alt-primary-red;
 @checkbox-hover-box-shadow:none;
 
-@checkbox-checked-border-color-after: #3f51b5;
+@checkbox-checked-border-color-after: @alt-primary-red;
 @checkbox-checked-border-radius-after: 1px;
-@checkbox-checked-background-color-after: #3f51b5;
+@checkbox-checked-background-color-after: @alt-primary-red;
 @checkbox-checked-color-after: #fff;
 
 @checkbox-active-border-color-before: transparent;
-@checkbox-active-border-color-after: #7f7f7f;
+@checkbox-active-border-color-after: @alt-primary-red;
 @checkbox-active-border-radius: 50%;
 @checkbox-active-border-radius-after: 1px;
 @checkbox-active-box-shadow: 0 0 0 12px RGBA(235, 235, 235, 0.3);
@@ -319,20 +319,20 @@
 @checkbox-disabled-border-color-before: #bfbfbf;
 
 //Radio buttons
-@radio-border-color-before: #7f7f7f;
-@radio-background-color: @widget-background-color;
+@radio-border-color-before: @alt-primary-red;
+@radio-background-color: #fff;
 @radio-border-width-before: 2px;
 
-@radio-hover-border-color: #7f7f7f;
+@radio-hover-border-color: @alt-primary-red;
 @radio-hover-box-shadow:none;
 
-@radio-checked-border-color-before: #3f51b5;
-@radio-checked-background-color-after: #3f51b5;
+@radio-checked-border-color-before: @alt-primary-red;
+@radio-checked-background-color-after: @alt-primary-red;
 
-@radio-active-border-color-before: #7f7f7f;
+@radio-active-border-color-before: @alt-primary-red;
 @radio-active-box-shadow: 0 0 0 0.750em RGBA(235, 235, 235, 0.3);
 
-@radio-checked-active-border-color-before: #3f51b5;
+@radio-checked-active-border-color-before: @alt-primary-red;
 @radio-checked-active-box-shadow: 0 0 0 0.750em RGBA(63, 81, 181, 0.3);
 
 @radio-disabled-background-color-after: #fff;
@@ -372,7 +372,7 @@ div.k-splitbar.k-state-focused .k-icon,
 .k-pivot-configurator-settings .k-icon:hover,
 .k-window-titlebar .k-icon
 {
-    opacity:1;
+    opacity: .7;
 }
 
 .k-tool-icon,
@@ -537,7 +537,7 @@ background-color: @drop-down-background;
 
 .k-picker-wrap.k-state-default > .k-select {
 border-color: @drop-down-background;
-  background: #fff;
+//  background: #fff;
 }
 
 .k-datepicker .k-input,
@@ -581,15 +581,18 @@ border-color: @drop-down-hover-border-color;
 .k-dropdown-wrap.k-state-focused,
 .k-multiselect.k-header.k-state-focused
 {
-background-color: @hover-background-color;
+background-color: #fff;
 .composite-background(@hover-gradient);
 background-position: 50% 50%;
-border-color: @hover-background-color;
+border-color: #fff;
 .box-shadow(@focused-shadow);
 }
 
 .k-numeric-wrap.k-state-focused > .k-select {
-	background-color: @hover-background-color;
+	background-color: #fff;
+}
+.k-numeric-wrap.k-state-focused > .k-input {
+    border-color: #fff;
 }
 
 .k-textbox:focus,
@@ -1215,6 +1218,13 @@ table.k-editor {
 }
 
 /* Pivot Grid */
+#configurator .k-i-dimension {
+  display: none !important;
+}
+
+.k-fieldselector.k-alt {
+  background: #fff;
+}
 .k-grid.k-alt {
 	background-color: @secondary-background-color;
 }
@@ -1306,7 +1316,7 @@ table.k-editor {
 }
 
 .k-radio:checked + .k-radio-label:hover:before {
-    border-color: @radio-checked-border-color-before;
+    border-color: @alt-primary-red;
 }
 
 .k-edit-form-container .k-edit-buttons {
