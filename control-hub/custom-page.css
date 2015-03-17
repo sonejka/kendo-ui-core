@@ -160,8 +160,52 @@ b,strong {
 }
 
 
+.two-col-box {
+    width: 100%;
+    display: table
+}
+
+.two-col-box .two-col-box-row {
+    overflow: hidden
+}
+
+.two-col-box .two-col-box-cell {
+    width: 50%;
+    float: left;
+    padding: 15px
+}
+
+.two-col-box .two-col-box-cell img {
+    width: auto;
+    max-width: 100%!important
+}
 
 
+.three-col-box {
+    width: 100%;
+    display: table
+}
+
+.three-col-box .three-col-box-row {
+    overflow: hidden
+}
+
+.three-col-box .three-col-box-cell {
+    width: 33.3%;
+    float: left;
+    padding: 15px
+}
+
+.three-col-box .three-col-box-cell img {
+    width: auto;
+    max-width: 100%!important
+}
+
+
+
+/*------------------------------------*\
+    HEADER
+\*------------------------------------*/
 
 header {
     background: #e1e3e6;
@@ -170,6 +214,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    padding: 0 20px 0 0;
 }
 
 
@@ -184,11 +229,22 @@ nav {
     left: 0;
     width: 304px;
     height: 100%;
-    color: #fff;
 }
 
 nav.closed {
     width: 72px;
+}
+
+nav.closed * {
+    display: none;
+}
+
+nav.closed .nav-btn {
+    display: block;
+}
+
+nav.closed .nav-btn:after {
+    content: "\f0c9";
 }
 
 .nav-btn {
@@ -208,10 +264,6 @@ nav.closed {
 .nav-btn:after {
     font-family:'FontAwesome';
     content: "\f03b";
-}
-
-nav.closed .nav-btn:after {
-    content: "\f0c9";
 }
 
 nav * {
@@ -248,10 +300,64 @@ nav h5 {
     background-color: #363f4b;
 }
 
-nav.closed * {
-    display: none;
+.nav-first-lvl > li > a:after {}
+
+/*------------------------------------*\
+    CONTENT
+\*------------------------------------*/
+
+.content {
+    padding: 85px 0 0 85px;
 }
 
-nav.closed .nav-btn {
-    display: block;
+.breadcrumbs li {
+    display: inline-block;
+    color: #ff503f;
 }
+
+.breadcrumbs li:before {
+    font-family:'FontAwesome';
+    content: "\f0da";
+    color: #454545;
+    padding: 0 10px;
+}
+
+.breadcrumbs li:last-child:before {
+    color: #ff503f;
+}
+
+.breadcrumbs li:first-child:before{
+    /*content: none;*/
+}
+
+.breadcrumbs li a {
+    color: #454545;
+    text-decoration: underline;
+}
+
+
+.breadcrumbs li a {
+    text-transform: uppercase;
+}
+
+
+.fieldlist
+{
+    margin:0;
+    padding:0;
+}
+
+.fieldlist li
+{
+    list-style:none;
+    padding:10px 0;
+}
+
+.fieldlist label {
+    display: inline-block;
+    width: 150px;
+    margin-right: 5px;
+    text-align: right;
+}
+
+

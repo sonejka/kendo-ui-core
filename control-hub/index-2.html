@@ -29,6 +29,10 @@
 <body>
 <header>
 
+<p class="text-right">
+    <i class="fa fa-sign-out"></i> <a href="#">Admin Console</a>
+    Logged in as  Kalle Klovn  <a href="#">[Sign out]</a>
+</p>
 
 </header>
 
@@ -42,8 +46,66 @@
         <li class="selected"><a href="#">Projects</a></li>
         <li><a href="#">Quotes</a></li>
     </ul>
-
 </nav>
+
+<div class="content">
+
+    <ul class="breadcrumbs">
+        <li><a href="#">Customers</a></li>
+        <li><span>New Customer</span></li>
+    </ul>
+
+    <div class="three-col-box text-center">
+        <div class="three-col-box-row">
+            <div class="three-col-box-cell">
+
+                <ul class="fieldlist">
+                    <li>
+                        <label for="phone_number">Phone number:</label>
+                        <input id="phone_number" value="555 123 4567" />
+                    </li>
+                    <li>
+                        <label for="credit_card">Credit Card number:</label>
+                        <input id="credit_card" value="1234 1234 1234 1234" />
+                    </li>
+                    <li>
+                        <label for="ssn">Social security number:</label>
+                        <input id="ssn" value="003-12-3456" />
+                    </li>
+                    <li>
+                        <label for="postcode">UK postcode:</label>
+                        <input id="postcode" value="W1N 1AC"/>
+                    </li>
+                </ul>
+                <script>
+                    $(document).ready(function() {
+                        $("#phone_number").kendoMaskedTextBox({
+                            mask: "(999) 000-0000"
+                        });
+
+                        $("#credit_card").kendoMaskedTextBox({
+                            mask: "0000 0000 0000 0000"
+                        });
+
+                        $("#ssn").kendoMaskedTextBox({
+                            mask: "000-00-0000"
+                        });
+
+                        $("#postcode").kendoMaskedTextBox({
+                            mask: "L0L 0LL"
+                        });
+                    });
+                </script>
+
+
+            </div>
+            <div class="three-col-box-cell">
+            </div>
+            <div class="three-col-box-cell"></div>
+        </div>
+    </div>
+    </div>
+
 
 
 <script>
