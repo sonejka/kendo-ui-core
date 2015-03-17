@@ -78,7 +78,7 @@
 @select-group-background-color: #ffffff;
 
 /* Selected State */
-@selected-text-color: #3f51b5;
+@selected-text-color: #ff503f;
 @selected-gradient: none;
 @selected-background-color: #fff;
 @selected-border-color: #fff;
@@ -458,6 +458,27 @@ background-color: @button-active-background;
 	.composite-background(@primary-active-gradient);
 	background-color: @primary-active-background-color;
 	.box-shadow(@primary-active-shadow);
+}
+
+.k-accent {
+  color: #fff;
+  border-color: @alt-primary-red;
+  background-color: @alt-primary-red;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.k-accent:hover,
+.k-accent.k-state-hover,
+.k-accent:active:hover,
+.k-accent.k-state-active:hover,
+.k-accent:active,
+.k-accent.k-state-active,
+.k-accent:focus,
+.k-accent.k-state-focused {
+  color: #fff;
+  border-color: @alt-minor-red;
+  background-color: @alt-minor-red;
 }
 
 .k-primary:hover,
