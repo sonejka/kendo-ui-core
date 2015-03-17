@@ -440,7 +440,7 @@ html .km-pane-wrapper .k-header {
 .k-button.k-state-disabled:hover,
 .k-state-disabled .k-button:active,
 .k-button.k-state-disabled:active {
-  color: #999999;
+  color: #a8a8a8;
   border-color: #e1e3e6;
   background-color: #e1e3e6;
   background-image: none;
@@ -693,7 +693,7 @@ div.k-filebrowser-dropzone em {
 .k-dropzone .k-upload-status,
 .k-tile-empty strong,
 .k-slider .k-draghandle {
-  color: #999999;
+  color: #a8a8a8;
 }
 /* Progressbar */
 .k-progressbar-indeterminate {
@@ -772,10 +772,10 @@ div.k-filebrowser-dropzone em {
   border-color: #e7e7e7;
 }
 .k-file-progress {
-  color: #0066cc;
+  color: #5b6a7f;
 }
 .k-file-progress .k-progress {
-  background-color: #3f51b5;
+  background-color: #404a58;
 }
 .k-file-success {
   color: #454545;
@@ -1872,7 +1872,7 @@ div.k-splitbar.k-state-focused .k-icon,
 .k-button.k-state-disabled:hover,
 .k-state-disabled .k-button:active,
 .k-button.k-state-disabled:active {
-  color: #999999;
+  color: #a8a8a8;
   border-color: #e1e3e6;
   background-color: #e1e3e6;
   background-image: none;
@@ -1966,6 +1966,12 @@ span.k-colorpicker {
   background-color: #ffffff;
   border-color: #efefef;
 }
+[disabled="disabled"],
+[disabled="disabled"]:hover {
+  background: #edeff2 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
 .k-combobox,
 .k-datepicker,
 .k-timepicker,
@@ -2042,20 +2048,22 @@ span.k-colorpicker {
 .k-numeric-wrap.k-state-disabled .k-select,
 .k-dropdown-wrap.k-state-disabled,
 .k-multiselect.k-header.k-state-disabled {
-  background-color: #ffffff;
+  background-color: #edeff2;
 }
 .k-numeric-wrap.k-state-disabled .k-select {
-  border-color: #ffffff;
+  border-color: #edeff2;
 }
 .k-numerictextbox .k-select {
   background-color: #ffffff;
   border-color: #ffffff;
 }
+.k-numerictextbox .k-select .k-link {
+  box-shadow: none;
+}
 .k-list > .k-state-selected.k-state-focused {
   background-color: #ffffff;
   border-color: #ffffff;
   color: #ff503f;
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .k-list > .k-state-focused {

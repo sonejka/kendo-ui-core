@@ -279,30 +279,29 @@
 
     <div class="column">
         <h3>Input</h3>
-
         <input value="Normal" data-role="maskedtextbox" class="k-textbox" autocomplete="off"/> <br/><br/>
-        <input value="Disabled" disabled="disabled" data-role="maskedtextbox" class="k-textbox" autocomplete="off"/><br/>
-
+        <input value="Disabled" disabled="disabled" data-role="maskedtextbox" class="k-textbox" autocomplete="off"/>
 
         <h3>Autocomplete</h3>
-
+        <input data-role="autocomplete" data-bind="source: countries" disabled="disabled" value="Disabled"/>
         <input data-role="autocomplete" data-bind="source: countries"/>
         <h3>Dropdownlist</h3>
-
+        <input data-role="dropdownlist" data-bind="source: countries" disabled="disabled" value="Disabled"/>
         <input data-role="dropdownlist" data-bind="source: countries"/>
         <h3>Combobox</h3>
-
+        <input data-role="combobox" data-bind="source: countries" disabled="disabled" value="Disabled"/>
         <input data-role="combobox" data-bind="source: countries"/>
         <h3>Datepicker</h3>
-
+        <input data-role="datepicker" data-bind="value: today" disabled="disabled" value="Disabled"/>
         <input data-role="datepicker" data-bind="value: today"/>
         <h3>Timepicker</h3>
-
+        <input data-role="timepicker" data-bind="value: today" disabled="disabled" value="Disabled"/>
         <input data-role="timepicker" data-bind="value: today"/>
         <h3>Numerictextbox</h3>
-
+        <input data-role="numerictextbox" type="number" min="0" max="10" value="5" disabled="disabled" value="Disabled"/>
         <input data-role="numerictextbox" type="number" min="0" max="10" value="5"/>
         <h3>Multiselect</h3>
+
         <select data-role="multiselect" data-bind="source: countries, value: multiSelectValue"
                 multiple="multiple"></select>
 

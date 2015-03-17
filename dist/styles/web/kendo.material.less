@@ -103,7 +103,7 @@
 @error-border-color: #eed3d7;
 
 /* Disabled State */
-@disabled-text-color: #999999;
+@disabled-text-color: #a8a8a8;
 
 /* Notification */
 @notification-info-background-color: #bbdefb;
@@ -162,8 +162,8 @@
 @resize-background-color: #fff;
 
 /* Upload */
-@upload-progress-background-color: #3f51b5;
-@upload-progress-text-color: #06c;
+@upload-progress-background-color: @alt-primary-gray;
+@upload-progress-text-color: @alt-minor-gray;
 @upload-success-background-color: #fce68d;
 @upload-success-text-color: @widget-text-color;
 @upload-error-background-color: #fce68d;
@@ -549,6 +549,11 @@ span.k-colorpicker {
     border-color: @drop-down-border-color;
 }
 
+[disabled="disabled"], [disabled="disabled"]:hover {
+  background: #edeff2 !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
 .k-combobox,
 .k-datepicker,
 .k-timepicker,
@@ -638,11 +643,11 @@ border-color: @drop-down-focused-border-color;
 .k-dropdown-wrap.k-state-disabled,
 .k-multiselect.k-header.k-state-disabled
 {
-background-color: @drop-down-background;
+background-color: #edeff2;
 }
 
 .k-numeric-wrap.k-state-disabled .k-select {
-	border-color: @drop-down-background;
+	border-color: #edeff2;
 }
 
 .k-numerictextbox .k-select {
@@ -650,12 +655,15 @@ background-color: @widget-background-color;
 border-color: @widget-background-color;
 }
 
+.k-numerictextbox .k-select .k-link {
+  box-shadow: none;
+}
+
 .k-list > .k-state-selected.k-state-focused {
 background-color: @selected-background-color;
 border-color: @selected-background-color;
-  color: @alt-primary-red;
-.box-shadow(none);
-
+color: @alt-primary-red;
+box-shadow: none;
 }
 
 .k-list > .k-state-focused {
