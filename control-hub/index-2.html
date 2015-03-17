@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kendo UI Controls</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!--<link rel="stylesheet" href="styles/kendo.common.min.css" />-->
+
+    <link href="http://cdn.kendostatic.com/2014.3.1411/styles/kendo.common-material.min.css" rel="stylesheet"/>
+    <!--<link href="http://cdn.kendostatic.com/2014.3.1411/styles/kendo.rtl.min.css" rel="stylesheet" />-->
+
+    <!--<link rel="stylesheet" href="../dist/styles/web/kendo.common-material.core.min.css" />-->
+    <link rel="stylesheet" href="../dist/styles/web/kendo.material.css"/>
+    <link rel="stylesheet" href="examples.css"/>
+    <link rel="stylesheet" href="custom-page.css"/>
+
+
+    <!--<link href="http://cdn.kendostatic.com/2014.3.1411/styles/kendo.material.min.css" rel="stylesheet" />-->
+    <!--<link href="http://cdn.kendostatic.com/2014.3.1411/styles/kendo.material.mobile.min.css" rel="stylesheet" />-->
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.all.min.js"></script>
+    <script src="datasource.js"></script>
+
+    <script src="http://cdn.kendostatic.com/2014.3.1411/js/jszip.min.js"></script>
+    <script src="http://cdn.kendostatic.com/2014.3.1411/js/kendo.timezones.min.js"></script>
+</head>
+<body>
+<header>
+
+
+</header>
+
+
+<nav id="navigation" class="closed">
+    <a class="nav-btn" href="javascript:void(0);"></a>
+    <h5>Menu</h5>
+    <ul class="nav-first-lvl">
+        <li><a href="#">Customers</a></li>
+        <li><a href="#">Warehouse</a></li>
+        <li class="selected"><a href="#">Projects</a></li>
+        <li><a href="#">Quotes</a></li>
+    </ul>
+
+</nav>
+
+
+<script>
+
+    $(function () {
+        $(".nav-btn").click(function () {
+            $(navigation).toggleClass("closed");
+        });
+    });
+
+</script>
+</body>
+</html>

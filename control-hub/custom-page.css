@@ -1,0 +1,257 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+/*------------------------------------*\
+    COMMON STYLES
+\*------------------------------------*/
+* {
+    box-sizing: border-box
+}
+
+.browsehappy {
+    margin: .2em 0;
+    background: #fff;
+    color: #7f7f7f;
+    padding: .2em 0
+}
+
+body,html {
+    height: 100%
+}
+
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: transparent
+}
+
+body {
+    font-family: 'Open Sans',sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    line-height: 1.42857143;
+    color: #7f7f7f;
+    background: url(../images/b7d61e19.bg.jpg) 0 0/cover no-repeat fixed #fff
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #404040
+}
+
+h1 {
+    font-size: 45px;
+    line-height: 45px
+}
+
+h2 {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 30px
+}
+
+h3 {
+    font-size: 27px;
+    line-height: 27px
+}
+
+h4 {
+    font-size: 25px;
+    line-height: 25px
+}
+
+h5 {
+    font-size: 18px;
+    line-height: 18px
+}
+
+h6 {
+    font-size: 14px;
+    line-height: 14px
+}
+
+p {
+    margin: 5px 0 0;
+    font-size: 15px;
+    line-height: 24px
+}
+
+.smaller {
+    font-size: 14px
+}
+
+a {
+    color: #ff503f;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller
+}
+
+b,strong {
+    font-weight: 700
+}
+
+.text-right {
+    text-align: right
+}
+
+.text-center {
+    text-align: center
+}
+
+.float-right {
+    float: right
+}
+
+.float-left {
+    float: left
+}
+
+.auto-width {
+    width: auto!important
+}
+
+
+
+
+
+header {
+    background: #e1e3e6;
+    height: 72px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+/*------------------------------------*\
+    NAVIGATION
+\*------------------------------------*/
+
+nav {
+    background: #404a58;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 304px;
+    height: 100%;
+    color: #fff;
+}
+
+nav.closed {
+    width: 72px;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    width: 72px;
+    height: 72px;
+    line-height: 72px;
+    font-size: 30px;
+    text-align: center;
+    background: #303945;
+    text-decoration: none !important;
+}
+
+.nav-btn:after {
+    font-family:'FontAwesome';
+    content: "\f03b";
+}
+
+nav.closed .nav-btn:after {
+    content: "\f0c9";
+}
+
+nav * {
+    color: #fff;
+}
+
+nav h5 {
+    text-align: center;
+    text-transform: uppercase;
+    min-height: 72px;
+    line-height: 72px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-first-lvl > li > a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-bottom: 1px solid #79889c;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.nav-first-lvl > li > a:hover {
+    background-color: #363f4b;
+    text-decoration: none;
+}
+
+.nav-first-lvl > li.selected > a {
+    color: #ff503f;
+    border-left: 2px solid #ff503f;
+    background-color: #363f4b;
+}
+
+nav.closed * {
+    display: none;
+}
+
+nav.closed .nav-btn {
+    display: block;
+}

@@ -2293,7 +2293,33 @@ td.k-group-cell,
 .k-footer-template td,
 .k-fieldselector .k-item.k-header {
   color: #454545;
-  background-color: #f9f9f9;
+  background-color: #e1e3e6;
+}
+.k-fieldselector {
+  font-size: 14px;
+}
+.k-fieldselector p {
+  text-transform: capitalize;
+}
+.k-fieldselector .k-list li.k-item {
+  padding: .5em 3.3em .5em 1em;
+  margin: .4em;
+  line-height: 1.6em ;
+  font-size: 14px;
+}
+.k-field-actions {
+  top: 8px;
+}
+.k-fieldselector .k-reset .k-i-vbars,
+.k-fieldselector .k-reset .k-i-hbars,
+.k-fieldselector .k-reset .k-i-sum {
+  display: none;
+}
+.k-fieldselector .k-item.k-state-hover .k-i-arrowhead-s {
+  background-position: 0 -288px;
+}
+.k-edit-form-container {
+  width: 500px;
 }
 .k-grid .k-grouping-header {
   color: rgba(255, 255, 255, 0.5);
