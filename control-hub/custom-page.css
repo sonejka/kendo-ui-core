@@ -223,29 +223,20 @@ header {
 \*------------------------------------*/
 
 nav {
+    width: 72px;
     background: #404a58;
     position: fixed;
     top: 0;
     left: 0;
-    width: 304px;
     height: 100%;
+    z-index: 10;
+    overflow: auto;
 }
 
-nav.closed {
-    width: 72px;
+nav.opened {
+    width: 302px;
 }
 
-nav.closed * {
-    display: none;
-}
-
-nav.closed .nav-btn {
-    display: block;
-}
-
-nav.closed .nav-btn:after {
-    content: "\f0c9";
-}
 
 .nav-btn {
     position: absolute;
@@ -259,12 +250,14 @@ nav.closed .nav-btn:after {
     text-align: center;
     background: #303945;
     text-decoration: none !important;
+    background: url("images/nav-btn.png") no-repeat 0 0;
 }
 
-.nav-btn:after {
-    font-family:'FontAwesome';
-    content: "\f03b";
+nav.opened .nav-btn {
+    display: block;
+    background-position: 0 -72px;
 }
+
 
 nav * {
     color: #fff;
@@ -279,17 +272,33 @@ nav h5 {
     padding: 0;
 }
 
-.nav-first-lvl > li > a {
+/*------------------------------------*\
+    NAV-FIRST-LVL
+\*------------------------------------*/
+
+nav .nav-first-lvl {
+    display: none;
+}
+
+nav.opened .nav-first-lvl {
+    display: block;
+}
+
+.nav-first-lvl > li a {
     display: block;
     height: 50px;
     line-height: 50px;
     text-align: center;
-    border-bottom: 1px solid #79889c;
+    border-top: 1px solid #79889c;
     text-transform: uppercase;
     font-size: 14px;
 }
 
-.nav-first-lvl > li > a:hover {
+.nav-first-lvl > li:first-child a {
+    border-top: 0;
+}
+
+.nav-first-lvl > li a:hover {
     background-color: #363f4b;
     text-decoration: none;
 }
@@ -300,7 +309,41 @@ nav h5 {
     background-color: #363f4b;
 }
 
-.nav-first-lvl > li > a:after {}
+.nav-first-lvl > li.opened > a {
+    color: #ff503f;
+}
+
+.nav-first-lvl > li.has-sub-nav > a:before {
+    font-family: 'FontAwesome';
+    content: "\f0da";
+    margin-right: 12px;
+    display: inline-block;
+}
+
+.nav-first-lvl > li.has-sub-nav.opened > a:before {
+    content: "\f0da";
+    transform: rotate(90deg);
+    color: #fff;
+}
+
+/*------------------------------------*\
+    NAV-SECOND-LVL
+\*------------------------------------*/
+.has-sub-nav .nav-second-lvl {
+    display: none;
+}
+
+.has-sub-nav.opened .nav-second-lvl {
+    display: block;
+}
+
+.nav-second-lvl > li > a {
+    height: 48px;
+    line-height: 48px;
+    border-top: 0;
+}
+
+
 
 /*------------------------------------*\
     CONTENT
