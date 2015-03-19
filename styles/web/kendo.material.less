@@ -1397,10 +1397,19 @@ table.k-editor {
 .k-edit-form-container .k-button,
 .k-popup .k-primary:active,
 .k-edit-form-container .k-primary:active {
-    color: @widget-text-color;
-    background-color: @secondary-background-color;
-    border-color: @secondary-background-color;
-    .box-shadow(none);
+//    color: @widget-text-color;
+//    background-color: @secondary-background-color;
+//    border-color: @secondary-background-color;
+//    box-shadow:none;
+
+      color: @widget-text-color;
+      background-color: transparent !important;
+      border-color: transparent !important;
+      box-shadow: none !important;
+}
+
+.k-edit-form-container .k-button:hover {
+  text-decoration: underline;
 }
 
 .k-popup .k-primary,
