@@ -292,6 +292,7 @@ nav.opened .nav-first-lvl {
     border-top: 1px solid #79889c;
     text-transform: uppercase;
     font-size: 14px;
+    color: #fff;
 }
 
 .nav-first-lvl > li:first-child a {
