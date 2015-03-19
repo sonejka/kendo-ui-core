@@ -1787,6 +1787,12 @@ html .km-pane-wrapper .km-widget,
     border-radius: 1px;
   }
 }
+a:link,
+a:hover,
+a:active,
+a:focus {
+  color: #ff503f;
+}
 .k-button:hover .k-icon,
 .k-tool-icon:hover,
 .k-state-hover .k-tool-icon,
@@ -2199,8 +2205,8 @@ td.k-state-focused.k-state-selected {
 .k-gantt-toolbar .k-button,
 .km-pane-wrapper .k-header .k-button {
   color: #ffffff;
-  background-color: #404a58;
-  border-color: #404a58;
+  background-color: #363f4b;
+  border-color: #363f4b;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
