@@ -14,9 +14,12 @@
  * limitations under the License.
  */
 
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,500&subset=latin,latin-ext);
 body * {
   font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
 }
 /* Widget Base Styles */
 /* Inputs */
@@ -2306,6 +2309,17 @@ td.k-group-cell,
 .k-group-footer td,
 .k-grid-footer td {
   border-color: #e5e5e5;
+}
+.k-grid-header th.k-header > .k-link {
+  font-weight: 500;
+}
+.k-header.k-grid-toolbar {
+  text-align: right;
+}
+.k-grid-header th.k-header,
+.k-filter-row th {
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 .k-group-footer td,
 .k-footer-template td,
