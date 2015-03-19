@@ -1790,8 +1790,10 @@ html .km-pane-wrapper .km-widget,
 a:link,
 a:hover,
 a:active,
-a:focus {
+a:focus,
+a:visited {
   color: #ff503f;
+  outline: 0;
 }
 .k-button:hover .k-icon,
 .k-tool-icon:hover,
@@ -2220,6 +2222,7 @@ td.k-state-focused.k-state-selected {
 .km-pane-wrapper .k-header .k-button:hover {
   background-color: #363f4b;
   border-color: #363f4b;
+  color: #fff;
 }
 .km-pane-wrapper .k-header .k-button:active:hover {
   color: #ffffff;

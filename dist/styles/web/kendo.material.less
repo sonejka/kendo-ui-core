@@ -342,8 +342,9 @@
 
 @import "theme-template.less";
 
-a:link, a:hover, a:active, a:focus {
+a:link, a:hover, a:active, a:focus, a:visited {
   color: @alt-primary-red;
+  outline: 0;
 }
 
 .k-button:hover .k-icon,
@@ -846,6 +847,7 @@ border-color: #363f4b;
 {
 background-color: @secondary-hover-background-color;
 border-color: @secondary-hover-background-color;
+  color: #fff;
 }
 
 .km-pane-wrapper .k-header .k-button:active:hover {
