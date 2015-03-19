@@ -2336,6 +2336,7 @@ td.k-group-cell,
 .k-edit-form-container {
   max-width: 500px;
   min-width: 400px;
+  width: auto;
 }
 .k-grid .k-grouping-header {
   color: rgba(255, 255, 255, 0.5);
