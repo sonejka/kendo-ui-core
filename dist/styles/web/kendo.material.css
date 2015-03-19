@@ -2334,7 +2334,8 @@ td.k-group-cell,
   background-position: 0 -288px;
 }
 .k-edit-form-container {
-  width: 500px;
+  max-width: 500px;
+  min-width: 400px;
 }
 .k-grid .k-grouping-header {
   color: rgba(255, 255, 255, 0.5);
@@ -2711,7 +2712,7 @@ table.k-editor {
 }
 .k-popup .k-primary,
 .k-edit-form-container .k-primary {
-  color: #404a58;
+  color: #ff503f;
 }
 .k-popup .k-button:focus:active:not(.k-state-disabled):not([disabled]),
 .k-edit-form-container .k-button:focus:active:not(.k-state-disabled):not([disabled]) {
