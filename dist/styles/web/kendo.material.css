@@ -2383,6 +2383,9 @@ td.k-group-cell,
 .k-grid-pager .k-link:link {
   color: #454545;
 }
+.k-grid-pager .k-icon {
+  margin-top: 5px;
+}
 .k-pager-numbers .k-link,
 .k-pager-wrap > .k-link {
   border-radius: 0;
