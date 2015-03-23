@@ -40,6 +40,43 @@ body * {
 .k-notification-wrap {
   padding: 1em;
 }
+.k-widget.k-notification.k-notification-info span.k-icon.k-i-note,
+.k-widget.k-notification.k-notification-success span.k-icon.k-i-note,
+.k-widget.k-notification.k-notification-warning span.k-icon.k-i-note,
+.k-widget.k-notification.k-notification-error span.k-icon.k-i-note {
+  background: none;
+}
+.k-widget.k-notification.k-notification-info span.k-icon.k-i-note:after,
+.k-widget.k-notification.k-notification-success span.k-icon.k-i-note:after,
+.k-widget.k-notification.k-notification-warning span.k-icon.k-i-note:after,
+.k-widget.k-notification.k-notification-error span.k-icon.k-i-note:after {
+  font-family: "FontAwesome", sans-serif;
+  background: none;
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  line-height: 20px;
+  font-size: 20px;
+  z-index: 100;
+  top: 12px;
+  left: 10px;
+}
+.k-widget.k-notification.k-notification-info span.k-icon.k-i-note:after {
+  content: "\f05a";
+  color: #1976d2;
+}
+.k-widget.k-notification.k-notification-success span.k-icon.k-i-note:after {
+  content: "\f14a";
+  color: #43a047;
+}
+.k-widget.k-notification.k-notification-warning span.k-icon.k-i-note:after {
+  content: "\f071";
+  color: #f2953f;
+}
+.k-widget.k-notification.k-notification-error span.k-icon.k-i-note:after {
+  content: "\f06a";
+  color: #f44336;
+}
 /* ToolTip */
 /* Validation Message */
 /* Splitter */
