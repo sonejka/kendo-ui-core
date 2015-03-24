@@ -1895,7 +1895,7 @@ div.k-splitbar.k-state-focused .k-icon,
 }
 .k-button,
 .k-header {
-  font-weight: 500;
+  font-weight: 400;
 }
 .k-button:active,
 .k-button.k-state-active,
@@ -2353,6 +2353,7 @@ td.k-group-cell,
 }
 .k-grid-header th.k-header > .k-link {
   font-weight: 500;
+  font-size: 14px;
 }
 .k-header.k-grid-toolbar {
   text-align: right;
@@ -2361,6 +2362,9 @@ td.k-group-cell,
 .k-filter-row th {
   padding-top: 1em;
   padding-bottom: 1em;
+}
+.k-grid-filter.k-state-active {
+  background: #e1e3e6;
 }
 .k-group-footer td,
 .k-footer-template td,
