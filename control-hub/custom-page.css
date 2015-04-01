@@ -222,7 +222,7 @@ header {
     NAVIGATION
 \*------------------------------------*/
 
-nav {
+.dynamic-nav {
     width: 72px;
     background: #404a58;
     position: fixed;
@@ -233,7 +233,7 @@ nav {
     overflow: auto;
 }
 
-nav.opened {
+.dynamic-nav.opened {
     width: 302px;
 }
 
@@ -253,17 +253,17 @@ nav.opened {
     background: url("images/nav-btn.png") no-repeat 0 0;
 }
 
-nav.opened .nav-btn {
+.dynamic-nav.opened .nav-btn {
     display: block;
     background-position: 0 -72px;
 }
 
 
-nav * {
+.dynamic-nav * {
     color: #fff;
 }
 
-nav h5 {
+.dynamic-nav h5 {
     text-align: center;
     text-transform: uppercase;
     min-height: 72px;
@@ -276,11 +276,11 @@ nav h5 {
     NAV-FIRST-LVL
 \*------------------------------------*/
 
-nav .nav-first-lvl {
+.dynamic-nav .nav-first-lvl {
     display: none;
 }
 
-nav.opened .nav-first-lvl {
+.dynamic-nav.opened .nav-first-lvl {
     display: block;
 }
 
