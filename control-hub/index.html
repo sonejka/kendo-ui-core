@@ -781,5 +781,27 @@
 
 </script>
 
+
+
+<div style="width: 600px; margin: 0 100px 300px;">
+
+
+
+<form method="post" action="/kendo-ui/upload/submit">
+    <div class="demo-section">
+        <input name="files" id="files" type="file" />
+        <p>
+            <input type="submit" value="Submit" class="k-button" />
+        </p>
+    </div>
+</form>
+<script>
+    $(document).ready(function() {
+        $("#files").kendoUpload();
+    });
+</script>
+
+</div>
+
 </body>
 </html>

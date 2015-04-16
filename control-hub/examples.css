@@ -3084,3 +3084,23 @@ html.k-material .demo-section.k-content {
         width: 200px;
     }
 }
+
+
+/*------------------------------------*\
+    UPLOAD
+\*------------------------------------*/
+
+.k-upload-sync .k-upload-button {
+    color: #ffffff;
+    border-color: #404a58;
+    background-color: #404a58;
+}
+
+.k-upload-files > .k-file {
+    background-color: #FCE68D;
+    line-height: 2.66;
+}
+
+.k-upload-files .k-button {
+    line-height: 2.5;
+}
